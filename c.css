@@ -1,0 +1,81 @@
+:root{
+--txt-color:black;
+--bg-color:white;		
+}
+
+.hamburger{
+	width:30px;
+	height:15px;
+	flex-direction: column;
+	justify-content: space-between;
+	background: none;
+	border: none;
+	display: flex;
+	z-index: 10;
+	cursor: pointer;
+}
+.hamburger span {
+  height: 2px;
+  background: black;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.hamburger.open span:nth-child(1) {
+  transform: translate(0px ,5.5px) rotate(45deg)  ;
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translate(0px,-5.5px) rotate(-45deg);
+}
+.navmenu{
+	position:fixed;
+	top:0;
+	left:1;
+	padding:0px;
+	transition: translate 0.3s;
+	translate:-200% 0%;
+}
+
+.overlay{
+	position: fixed;
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+.overlay.open{
+	background-color:grey;
+	opacity: 0.5;
+	pointer-events: all;
+}
+
+.navmenu.open{
+	translate:50% -10%;
+	position:fixed;
+}
+body{
+	color: var(--txt-color);
+	background-color: var(--bg-color);
+	margin:0px;
+	padding:0px;
+}
+
+
+body.black{
+	--txt-color:white;
+	--bg-color:black;
+}
+
+.top{
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+ *{
+	-webkit-text-stroke: 1px black;
+	color:white;
+	outline: 1px solid red;
+ }
