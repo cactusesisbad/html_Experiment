@@ -26,22 +26,25 @@ asdadasdasdasd
 			<div class="game">
 				<div id="status">Wanna Play<strong><i>?</i></strong></div>
 				<p id="score">Score:1X1X1</p>
-				<input type="checkbox" id="checkbox1"onclick="checkmines(0,id)" />
-				<input type="checkbox" id="checkbox2"onclick="checkmines(1,id)" />
-				<input type="checkbox" id="checkbox3"onclick="checkmines(2,id)" /><br/>
-				<input type="checkbox" id="checkbox4"onclick="checkmines(3,id)" />
-				<input type="checkbox" id="checkbox5"onclick="checkmines(4,id)" />
-				<input type="checkbox" id="checkbox6"onclick="checkmines(5,id)" /><br/>
-				<input type="checkbox" id="checkbox7"onclick="checkmines(6,id)" />
-				<input type="checkbox" id="checkbox8"onclick="checkmines(7,id)" />
-				<input type="checkbox" id="checkbox9"onclick="checkmines(8,id)" />
+				<div class="mindfield">
+					<input class="minds" type="checkbox" id="checkbox1"onclick="checkmines(0,id)" />
+					<input class="minds" type="checkbox" id="checkbox2"onclick="checkmines(1,id)" />
+					<input class="minds" type="checkbox" id="checkbox3"onclick="checkmines(2,id)" />
+					<input class="minds" type="checkbox" id="checkbox4"onclick="checkmines(3,id)" />
+					<input class="minds" type="checkbox" id="checkbox5"onclick="checkmines(4,id)" />
+					<input class="minds" type="checkbox" id="checkbox6"onclick="checkmines(5,id)" />
+					<input class="minds" type="checkbox" id="checkbox7"onclick="checkmines(6,id)" />
+					<input class="minds" type="checkbox" id="checkbox8"onclick="checkmines(7,id)" />
+					<input class="minds" type="checkbox" id="checkbox9"onclick="checkmines(8,id)" />
+				</div>
+
 				<div> <button id="startbtn" onclick="startmines()"/>Let's Play<i><b>!</b></i></div>
 				<div><input type="range" id="bet" name="bet"min="1" max="10" /> <label for="bet">bet amount:5</label></div>
 				<div><input type="range" id="difficulty" name="dif"min="1" max="3" /> <label for="dif">difficulty:2</label></div>
 				<div class="difficulty_buttons">
-					<span> <button class="difficulty_button" ></button></span>					
-					<span> <button class="difficulty_button" ></button></span>					
-					<span> <button class="difficulty_button" ></button></span>
+					<span> <button class="difficulty_button" >hard</button></span>					
+					<span> <button class="difficulty_button" >medium</button></span>					
+					<span> <button class="difficulty_button" >easy</button></span>
 				</div>
 				<p id="bombstxt">bombs:</p>
 			</div>
