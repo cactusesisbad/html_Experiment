@@ -4,7 +4,7 @@
 
 //total mines
 //NOTE seems like the current mines is WIEGHTED toward totalmines num 
-let totalmines = 4;
+let totalmines = 3;
 //the mine field
 let mindfeild=[0,0,0,0,0,0,0,0,0];
 
