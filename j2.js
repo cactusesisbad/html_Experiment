@@ -91,7 +91,12 @@ function checkmines(i,name){
 		}	
 		if(i==gamemines){
 			console.log("win");
+			minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 			statustext.innerHTML="You win <strong><i>!</i></strong>";
+			const boxes = document.querySelectorAll(".game input[type='checkbox']");
+			for(const box of boxes){
+				box.disabled =true;	
+			}
 		}
 	}
 	//add win logic!
