@@ -70,8 +70,12 @@ function startmines(){
 	minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 }
 function checkmines(i,name){
+	
+	//disables clicked mine
 	document.getElementById(name).disabled = true;
 	console.log(name);
+	
+	//lose
 	if(mindfeild[i]==1){
 		statustext.innerHTML="You Lose<strong><i>!</i></strong>";
 		console.log("game over");
@@ -89,10 +93,12 @@ function checkmines(i,name){
 		for(const box of boxes){
 			if(!box.disabled){i++;}
 		}	
+		//win
 		if(i==gamemines){
 			console.log("win");
 			minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 			statustext.innerHTML="You win <strong><i>!</i></strong>";
+			minesbtn.innerHTML="Try again<i><b>?</b></i>";
 			const boxes = document.querySelectorAll(".game input[type='checkbox']");
 			for(const box of boxes){
 				box.disabled =true;	

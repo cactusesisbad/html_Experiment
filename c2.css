@@ -30,8 +30,27 @@ body.black{
 	align-content:space-evenly;
 	
 }
+.game{
+	/*need to centre everything like
+	
+				TITLE
+			hamburger helperV2
+	loermasda sadaksfjg askfjfad aks
+	asdka fakdhfa akdhfk aka akfja kf
+			   dafkkafja
+	
+				the end
+	
+	*/
+}
 .minds{
 	flex-grow:1;
+	-webkit-appearance: none;
+	appearance:none;
+	background-color:blue;
 	width:10vw;
 	aspect-ratio:1/1;
+}
+.minds:checked{
+	background-color:green;
 }
