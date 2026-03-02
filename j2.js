@@ -41,8 +41,8 @@ function startmines(){
 
 	let f = Math.round(totalmines*(bet/difficulty));
 
-	if(f<7&&f>0){currentmines=f;}else{
-		if(f>7){ currentmines=7;}
+	if(f<8&&f>0){currentmines=f;}else{
+		if(f>8){ currentmines=8;}
 		if(f<0){ currentmines=0;}
 	}
 	document.getElementById("bombstxt").innerHTML="bombs:"+currentmines;
