@@ -77,14 +77,14 @@ function checkmines(i,name){
 	if(mindfeild[i]==1){
 		statustext.innerHTML="You Lose<strong>!<i></i></strong>";
 		console.log("game over");
-		score=score-0.5;
+		score=score-0.2*difficulty*bet;
 		//unchecks all boxs
 		const boxes = document.querySelectorAll(".game input[type='checkbox']");
 		for(const box of boxes){
 			box.disabled =true;	
 		}	
 		minesbtn.innerHTML="Retry<i><b>?</b></i>";
-	}else{score=score+0.2*Math.round(totalmines*(bet/difficulty));minesbtn.innerHTML="End Game<i><b>?</b></i>";}
+	}else{score=score+0.2*Math.round(totalmines*(bet*difficulty));minesbtn.innerHTML="End Game<i><b>?</b></i>";}
 	//add win logic!
 	scoretext.innerHTML="Score:"+bet+"X"+score.toFixed(1)+"X"+difficulty;
 }
