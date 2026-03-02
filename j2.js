@@ -13,7 +13,7 @@ let score = 1;
 
 //amount of bet. increase difficulty the bigger the bet
 let bet=5;
-let difficulty=5;
+let difficulty=2;
 //get the items
 const scoretext = document.getElementById("score");
 const statustext = document.getElementById("status");
