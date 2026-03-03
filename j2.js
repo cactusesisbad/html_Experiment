@@ -5,6 +5,7 @@
 //total mines
 //NOTE seems like the current mines is WIEGHTED toward totalmines num 
 let totalmines = 3;
+let gamemines = 3;
 //the mine field
 let mindfeild=[0,0,0,0,0,0,0,0,0];
 
@@ -37,20 +38,17 @@ function startmines(){
 			box.disabled =false;	
 			box.checked =false;
 		}	
+	
 	let currentmines=totalmines;
-
-	let f = Math.round(totalmines*(bet/difficulty));
-
+	//calculate current mines
+	let f = Math.round((totalmines*difficulty)+bet);
 	if(f<8&&f>0){currentmines=f;}else{
 		if(f>8){ currentmines=8;}
 		if(f<0){ currentmines=0;}
 	}
+	gamemines=currentmines;
 	document.getElementById("bombstxt").innerHTML="bombs:"+currentmines;
-	
-	/*
-	totalmines X bet/difficulty
-	and if it is within the num than thats the mines? <=clamping
-	*/
+//generating the mindfeild
 	console.log(currentmines);
 	let i=0;
 	mindfeild.fill("0");
@@ -72,21 +70,44 @@ function startmines(){
 	minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 }
 function checkmines(i,name){
+	
+	//disables clicked mine
 	document.getElementById(name).disabled = true;
 	console.log(name);
+	
+	//lose
 	if(mindfeild[i]==1){
-		statustext.innerHTML="You Lose<strong>!<i></i></strong>";
+		statustext.innerHTML="You Lose<strong><i>!</i></strong>";
 		console.log("game over");
-		score=score-0.2*difficulty*bet;
+		score=score+(-0.2*difficulty)-bet;
 		//unchecks all boxs
 		const boxes = document.querySelectorAll(".game input[type='checkbox']");
 		for(const box of boxes){
 			box.disabled =true;	
 		}	
 		minesbtn.innerHTML="Retry<i><b>?</b></i>";
-	}else{score=score+0.2*Math.round(totalmines*(bet*difficulty));minesbtn.innerHTML="End Game<i><b>?</b></i>";}
+	}else{
+		let i=0;
+		score=score+0.2*Math.round(totalmines*difficulty+bet);minesbtn.innerHTML="End Game<i><b>?</b></i>";
+		const boxes = document.querySelectorAll(".game input[type='checkbox']");
+		for(const box of boxes){
+			if(!box.disabled){i++;}
+		}	
+		//win
+		if(i==gamemines){
+			console.log("win");
+			minesbtn.innerHTML="Reroll<i><b>?</b></i>"
+			statustext.innerHTML="You win <strong><i>!</i></strong>";
+			minesbtn.innerHTML="Try again<i><b>?</b></i>";
+			const boxes = document.querySelectorAll(".game input[type='checkbox']");
+			for(const box of boxes){
+				box.disabled =true;	
+			}
+		}
+	}
 	//add win logic!
 	scoretext.innerHTML="Score:"+bet+"X"+score.toFixed(1)+"X"+difficulty;
+	//add a intermediarie score so that score var only updates when game lost or win
 }
 
 /*
