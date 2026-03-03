@@ -9,3 +9,48 @@ body.black{
 	color:white;
 	background-color:black;
 }
+.difficulty_buttons{
+	margin:0vh 1vw;
+	display:flex;
+	justify-content:space-evenly;
+	align-items:center;
+}
+.difficulty_button{
+	height:30vh;
+	width:30vw;
+}
+
+.mindfield{
+	border:5px solid purple;
+	max-width:35vw;
+	aspect-ratio:1/1;
+	flex-wrap:wrap;
+	display:flex;
+	justify-content:space-evenly;
+	align-content:space-evenly;
+	
+}
+.game{
+	/*need to centre everything like
+	
+				TITLE
+			hamburger helperV2
+	loermasda sadaksfjg askfjfad aks
+	asdka fakdhfa akdhfk aka akfja kf
+			   dafkkafja
+	
+				the end
+	
+	*/
+}
+.minds{
+	flex-grow:1;
+	-webkit-appearance: none;
+	appearance:none;
+	background-color:blue;
+	width:10vw;
+	height:10vw;
+}
+.minds:checked{
+	background-color:green;
+}
