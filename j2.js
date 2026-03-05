@@ -26,6 +26,11 @@ const difficultyslider = document.getElementById("difficulty");
 betslider.addEventListener("input",function changebet(){bet=betslider.value; document.querySelector('label[for="bet"]').innerHTML="bet amount:"+bet;});
 difficultyslider.addEventListener("input",function changedif(){difficulty=difficultyslider.value;document.querySelector('label[for="dif"]').innerHTML="difficulty:"+difficulty;});
 
+//buttons change difficulty
+function changedif(id,i){
+difficulty=i;
+document.querySelector('label[for="dif"]').innerHTML="difficulty:"+difficulty;	
+}
 
 //starts or generates a new fielsd
 function startmines(){
