@@ -24,7 +24,6 @@ const betslider = document.getElementById("bet");
 const difficultyslider = document.getElementById("difficulty");
 //updates the sliders
 betslider.addEventListener("input",function changebet(){bet=betslider.value; document.querySelector('label[for="bet"]').innerHTML="bet amount:"+bet;});
-difficultyslider.addEventListener("input",function changedif(){difficulty=difficultyslider.value;document.querySelector('label[for="dif"]').innerHTML="difficulty:"+difficulty;});
 
 //buttons change difficulty
 function changedif(id,i){
