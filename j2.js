@@ -4,7 +4,7 @@
 
 //total mines
 //NOTE seems like the current mines is WIEGHTED toward totalmines num 
-let totalmines = 3;
+let totalmines = 2;
 let gamemines = 3;
 //the mine field
 let mindfeild=[0,0,0,0,0,0,0,0,0];
@@ -41,7 +41,7 @@ function startmines(){
 	
 	let currentmines=totalmines;
 	//calculate current mines
-	let f = Math.round((totalmines*difficulty)+bet);
+	let f = Math.round((totalmines*difficulty)+bet/10);
 	if(f<8&&f>0){currentmines=f;}else{
 		if(f>8){ currentmines=8;}
 		if(f<0){ currentmines=0;}
