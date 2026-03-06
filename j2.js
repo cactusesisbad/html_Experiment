@@ -37,6 +37,7 @@ function startmines(){
 		for(const box of boxes){
 			box.disabled =false;	
 			box.checked =false;
+			box.dataset.triggr ="false";
 		}	
 	
 	let currentmines=totalmines;
@@ -77,6 +78,8 @@ function checkmines(i,name){
 	
 	//lose
 	if(mindfeild[i]==1){
+		
+		document.getElementById(name).dataset.triggr = true;
 		statustext.innerHTML="You Lose<strong><i>!</i></strong>";
 		console.log("game over");
 		score=score+(-0.2*difficulty)-bet;
