@@ -54,3 +54,6 @@ body.black{
 .minds:checked{
 	background-color:green;
 }
+.minds[data-triggr="true"]{
+	background-color:red;
+}

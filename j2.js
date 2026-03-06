@@ -24,12 +24,8 @@ const betslider = document.getElementById("bet");
 const difficultyslider = document.getElementById("difficulty");
 //updates the sliders
 betslider.addEventListener("input",function changebet(){bet=betslider.value; document.querySelector('label[for="bet"]').innerHTML="bet amount:"+bet;});
+difficultyslider.addEventListener("input",function changedif(){difficulty=difficultyslider.value;document.querySelector('label[for="dif"]').innerHTML="difficulty:"+difficulty;});
 
-//buttons change difficulty
-function changedif(id,i){
-difficulty=i;
-document.querySelector('label[for="dif"]').innerHTML="difficulty:"+difficulty;	
-}
 
 //starts or generates a new fielsd
 function startmines(){
@@ -41,6 +37,7 @@ function startmines(){
 		for(const box of boxes){
 			box.disabled =false;	
 			box.checked =false;
+			box.dataset.triggr ="false";
 		}	
 	
 	let currentmines=totalmines;
@@ -81,6 +78,8 @@ function checkmines(i,name){
 	
 	//lose
 	if(mindfeild[i]==1){
+		
+		document.getElementById(name).dataset.triggr = true;
 		statustext.innerHTML="You Lose<strong><i>!</i></strong>";
 		console.log("game over");
 		score=score+(-0.2*difficulty)-bet;
