@@ -79,6 +79,10 @@ function checkmines(i,name){
 	//lose
 	if(mindfeild[i]==1){
 		
+			const boxess=document.querySelectorAll(".difficulty_buttons Button");
+			for(const boxs of boxess){
+				boxs.disabled=false;
+			}
 		document.getElementById(name).dataset.triggr = true;
 		statustext.innerHTML="You Lose<strong><i>!</i></strong>";
 		console.log("game over");
@@ -98,11 +102,15 @@ function checkmines(i,name){
 		}	
 		//win
 		if(i==gamemines){
+			const boxess=document.querySelectorAll(".difficulty_buttons Button");
+			for(const boxs of boxess){
+				boxs=disabled=false;
+			}
 			console.log("win");
 			minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 			statustext.innerHTML="You win <strong><i>!</i></strong>";
 			minesbtn.innerHTML="Try again<i><b>?</b></i>";
-			const boxes = document.querySelectorAll(".game input[type='checkbox']");
+			boxes = document.querySelectorAll(".game input[type='checkbox']");
 			for(const box of boxes){
 				box.disabled =true;	
 			}
@@ -112,6 +120,22 @@ function checkmines(i,name){
 	scoretext.innerHTML="Score:"+bet+"X"+score.toFixed(1)+"X"+difficulty;
 	//add a intermediarie score so that score var only updates when game lost or win
 }
+
+
+//for difficulty buttons
+function changedif(id,num){
+	
+	
+	const boxes=document.querySelectorAll(".difficulty_buttons Button");
+	for(const box of boxes){
+		box.disabled=true;
+	}
+	
+	
+	difficulty=num;
+	document.querySelector('label[for="dif"]').innerHTML="difficulty:"+difficulty;
+}
+
 
 /*
 if num is >a then num=a
