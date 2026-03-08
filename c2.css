@@ -21,6 +21,7 @@ body.black{
 	height:30vh;
 	width:30vw;
 	transition:all 0.35s ease;
+	border-radius:10px;
 }
 
 .mindfield{
@@ -30,7 +31,7 @@ body.black{
 	flex-wrap:wrap;
 	display:flex;
 	justify-content:space-evenly;
-	align-items:space-evenly;
+	align-items:center;
 }
 .game{
 	display:flex;		
@@ -47,7 +48,13 @@ body.black{
 	background-color:blue;
 	width:10vw;
 	height:10vw;
-	transition:	all 0.2s ease;	
+	transition:	all 0.2s ease;
+	border-radius:10px;
+}
+.startbtn{
+	width:10vw;
+	height:5vh;
+	border-radius:10px;
 }
 .difficulty_button:hover{
 	background-color:grey;
