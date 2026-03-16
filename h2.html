@@ -40,13 +40,16 @@ asdadasdasdasd
 
 				<div> <button class="startbtn" id="startbtn" onclick="startmines()">Let's Play<i><b>!</b></i></button></div>
 				<div><input type="range" id="bet" name="bet"min="1" max="10" /> <label for="bet">bet amount:5</label></div>
-				<div><input type="range" id="difficulty" name="dif"min="1" max="3" /> <label for="dif">difficulty:2</label></div>
-				<div class="difficulty_buttons">
-					 <button class="difficulty_button" id="easy" onclick="changedif(id,1)" >hard</button>
-					 <button class="difficulty_button" id="med" onclick="changedif(id,2)" >medium</button>
-					 <button class="difficulty_button" id="hard" onclick="changedif(id,3)" >easy</button>
-					 </div>
+				<div class="dif"><p>Pick a difficulty !</p></div>
 				<p id="bombstxt">bombs:0</p>
+				<div class="dif_btn_manager" data-started="true">
+					<div class="difficulty_buttons">
+						<button class="difficulty_button" id="easy" onclick="changedif(id,1)" >hard</button>
+						<button class="difficulty_button" id="med" onclick="changedif(id,2)" >medium</button>
+						<button class="difficulty_button" id="hard" onclick="changedif(id,3)" >easy</button>
+					 </div>
+				</div>
+
 			</div>
 			
 	</body>
@@ -54,5 +57,4 @@ asdadasdasdasd
 </html>
 
 
-//add a listener and twick settings and hook it up to systems  and make it look pretty
 

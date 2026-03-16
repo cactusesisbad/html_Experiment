@@ -16,12 +16,34 @@ body.black{
 	align-items:space-evenly;
 	width:100vw;
 }
+.dif_btn_manager[data-started="true"]{
+	position:absolute;
+	visibility:visible;
+	transform-origin:centre;
+	transform:scale(1);
+}
+.dif_btn_manager{
+	transition:all 2s ease;
+	position:relative;
+	visibility:hidden;
+	transform-origin:centre;
+	transform:scale(0);
+}
 .difficulty_button{
 	padding:0px 3vw;
 	height:30vh;
 	width:30vw;
 	transition:all 0.35s ease;
 	border-radius:10px;
+
+}
+
+.difficulty_button:hover{
+	background-color:grey;
+}
+
+.difficulty_button:disabled{
+	background-color:brown;
 }
 
 .mindfield{
@@ -51,23 +73,23 @@ body.black{
 	transition:	all 0.2s ease;
 	border-radius:10px;
 }
+
+.minds:checked{
+	background-color:green;
+}
+
+.minds[data-startup="true"]{
+	background-color:grey;
+}
+
+.minds[data-triggr="true"]{
+	background-color:red;
+}
+
 .startbtn{
 	width:10vw;
 	height:5vh;
 	border-radius:10px;
 }
-.difficulty_button:hover{
-	background-color:grey;
-}
-.difficulty_button:disabled{
-	background-color:brown;
-}
-.minds:checked{
-	background-color:green;
-}
-.minds[data-startup="true"]{
-	background-color:grey;
-}
-.minds[data-triggr="true"]{
-	background-color:red;
-}
+
+
