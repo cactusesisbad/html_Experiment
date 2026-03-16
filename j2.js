@@ -79,20 +79,15 @@ function checkmines(i,name){
 	
 	//lose
 	if(mindfeild[i]==1){
-		
-			const boxess=document.querySelectorAll(".difficulty_buttons Button");
-			for(const boxs of boxess){
-				boxs.disabled=false;
-			}
+			
+		boxes(".difficulty_buttons Button",false);
+			
 		document.getElementById(name).dataset.triggr = true;
 		statustext.innerHTML="You Lose<strong><i>!</i></strong>";
 		console.log("game over");
 		score=score+(-0.2*difficulty)-bet;
 		//unchecks all boxs
-		const boxes = document.querySelectorAll(".game input[type='checkbox']");
-		for(const box of boxes){
-			box.disabled =true;	
-		}	
+		boxes(".game input[type='checkbox']",true);	
 		minesbtn.innerHTML="Retry<i><b>?</b></i>";
 	}else{
 		let i=0;
@@ -103,18 +98,13 @@ function checkmines(i,name){
 		}	
 		//win
 		if(i==gamemines){
-			const boxess=document.querySelectorAll(".difficulty_buttons Button");
-			for(const boxs of boxess){
-				boxs=disabled=false;
-			}
+			boxes(".difficulty_buttons Button",false);
+			
 			console.log("win");
 			minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 			statustext.innerHTML="You win <strong><i>!</i></strong>";
 			minesbtn.innerHTML="Try again<i><b>?</b></i>";
-			boxes = document.querySelectorAll(".game input[type='checkbox']");
-			for(const box of boxes){
-				box.disabled =true;	
-			}
+			boxes(".game input[type='checkbox']",true);	
 		}
 	}
 	//add win logic!
@@ -122,24 +112,19 @@ function checkmines(i,name){
 	//add a intermediarie score so that score var only updates when game lost or win
 }
 
-
 //for difficulty buttons
 function changedif(id,num){
 	
 	
-	const boxes=document.querySelectorAll(".difficulty_buttons Button");
-	for(const box of boxes){
-		box.disabled=true;
-	}
+	boxes(".difficulty_buttons Button",true);
 	
 	
 	difficulty=num;
 	document.querySelector('label[for="dif"]').innerHTML="difficulty:"+difficulty;
 }
-
-
-/*
-if num is >a then num=a
-if num is <b then num=b
-
-*/
+function boxes(name,disable){
+	const boxes=document.querySelectorAll(name);
+	for(const box of boxes){
+		box.disabled=disable;
+	}
+}
