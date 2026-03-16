@@ -38,6 +38,7 @@ function startmines(){
 			box.disabled =false;	
 			box.checked =false;
 			box.dataset.triggr ="false";
+			box.dataset.startup ="false";
 		}	
 	
 	let currentmines=totalmines;

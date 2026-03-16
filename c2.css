@@ -65,6 +65,9 @@ body.black{
 .minds:checked{
 	background-color:green;
 }
+.minds[data-startup="true"]{
+	background-color:grey;
+}
 .minds[data-triggr="true"]{
 	background-color:red;
 }
