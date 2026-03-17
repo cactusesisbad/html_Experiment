@@ -22,15 +22,15 @@ body.black{
 }
 .dif_btn_manager{
 	position:absolute;
-	transition:all 2s ease;
+	transition:all 0.5s ease;
 	visibility:hidden;
 	transform:scale(0);
 }
 .difficulty_button{
 	padding:0px 3vw;
-	height:30vh;
+	height:80vh;
 	width:30vw;
-	transition:all 0.35s ease;
+	transition:all 0.15s ease;
 	border-radius:10px;
 
 }
@@ -41,6 +41,7 @@ body.black{
 
 .difficulty_button:disabled{
 	background-color:brown;
+	width:0vw;
 }
 
 .mindfield{
@@ -57,6 +58,10 @@ body.black{
 	justify-content:center;
 	align-items:center;
 	flex-direction:column;
+}
+.game hr {
+	width:100vw;
+	margin:0px;
 }
 .minds{
 	flex-grow:1;

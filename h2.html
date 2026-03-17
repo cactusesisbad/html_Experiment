@@ -9,23 +9,15 @@
 		<script src="j2.js" defer></script>
 	</head>
 	<body class="black">
-		<div>
-			<p>TOP BAR</p>
+		<span class="top_bar_menu">
 			<button onclick="ChangeColor()"><img src="bright.jpg" height=20 width=20></button>
-			<span class="top_bar_menu">
-				<button>
-				<div></div>
-				<div></div>
-				<div></div>
-				</button>
-			</span>
-		</div>
-asdadasdasdasd
-		<hr>
-			<p>hfs</p>
+			project_1
+		</span>
+		<hr/>
 			<div class="game">
 				<div id="status">Wanna Play<strong><i>?</i></strong></div>
-				<p id="score">Score:1X1X1</p>
+				<hr/>
+				<p id="score">Score:1</p>
 				<div class="dif"><p>Pick a difficulty !</p></div>
 				<p id="bombstxt">bombs:0</p>
 				<div><input type="range" id="bet" name="bet"min="1" max="10" /> <label for="bet">bet amount:5</label></div>
@@ -45,9 +37,9 @@ asdadasdasdasd
 
 				<div class="dif_btn_manager" data-started="true">
 					<div class="difficulty_buttons">
-						<button class="difficulty_button" id="easy" onclick="changedif(id,1)" >hard</button>
-						<button class="difficulty_button" id="med" onclick="changedif(id,2)" >medium</button>
-						<button class="difficulty_button" id="hard" onclick="changedif(id,3)" >easy</button>
+						<button class="difficulty_button" id="easy" onclick="changedif(id,1)" >easy </br> difficulty</button>
+						<button class="difficulty_button" id="med" onclick="changedif(id,2)" >medium</br> difficulty</button>
+						<button class="difficulty_button" id="hard" onclick="changedif(id,3)" >hard</br> difficulty</button>
 					 </div>
 				</div>
 

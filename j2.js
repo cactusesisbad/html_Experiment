@@ -129,7 +129,7 @@ function checkmines(i,name){
 		}
 	}
 	//add win logic!
-	scoretext.innerHTML="Score:"+bet+"X"+score.toFixed(1)+"X"+difficulty;
+	scoretext.innerHTML="Score:"+score.toFixed(1);
 	//add a intermediarie score so that score var only updates when game lost or win
 }
 
