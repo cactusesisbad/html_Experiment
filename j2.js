@@ -2,6 +2,8 @@
 //I didnt use ai and tried to make this in less than a day whilst learning html and js and didnt actually plan anything
 //my apologise for the spaggeti code ;)/
 
+let debugmode=false;
+
 //total mines
 //NOTE seems like the current mines is WIEGHTED toward totalmines num 
 let totalmines = 2;
@@ -27,7 +29,7 @@ betslider.addEventListener("input",function changebet(){bet=betslider.value; doc
 
 //starts or generates a new fielsd
 function startmines(isfrombtn){
-	console.log(difficulty);
+	debug(difficulty);
 	statustext.innerHTML="IN PROGRESS";
 	//finds all checkboxs
 	const boxess = document.querySelectorAll(".game input[type='checkbox']");
@@ -66,7 +68,7 @@ function startmines(isfrombtn){
 	gamemines=currentmines;
 	document.getElementById("bombstxt").innerHTML="bombs:"+currentmines;
 //generating the mindfeild
-	console.log(currentmines);
+	debug(currentmines);
 	let i=0;
 	mindfeild.fill("0");
 	while(currentmines>0){		
@@ -83,14 +85,14 @@ function startmines(isfrombtn){
 		// 1,0,0
 		// 1,0,U
 		}
-	console.log(mindfeild);
+	debug(mindfeild);
 	minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 }
 function checkmines(i,name){
 	
 	//disables clicked mine
 	document.getElementById(name).disabled = true;
-	console.log(name);
+	debug(name);
 	
 	//lose
 	if(mindfeild[i]==1){
@@ -102,7 +104,7 @@ function checkmines(i,name){
 			}
 		document.getElementById(name).dataset.triggr = true;
 		statustext.innerHTML="You Lose<strong><i>!</i></strong>";
-		console.log("game over");
+		debug("game over");
 		score=score+(-0.2*difficulty)-bet;
 		//unchecks all boxs
 		boxes(".game input[type='checkbox']",true);	
@@ -121,7 +123,7 @@ function checkmines(i,name){
 					for(const box of boxesss){
 					box.dataset.started=true;
 					}
-			console.log("win");
+			debug("win");
 			minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 			statustext.innerHTML="You win <strong><i>!</i></strong>";
 			minesbtn.innerHTML="Try again<i><b>?</b></i>";
@@ -148,5 +150,11 @@ function boxes(name,disable){
 	const boxes=document.querySelectorAll(name);
 	for(const box of boxes){
 		box.disabled=disable;
+	}
+}
+
+function debug(message){
+	if(debugmode){
+		console.log(message);
 	}
 }
