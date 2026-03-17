@@ -26,7 +26,7 @@ betslider.addEventListener("input",function changebet(){bet=betslider.value; doc
 
 
 //starts or generates a new fielsd
-function startmines(){
+function startmines(isfrombtn){
 	console.log(difficulty);
 	statustext.innerHTML="IN PROGRESS";
 	//finds all checkboxs
@@ -38,11 +38,21 @@ function startmines(){
 			box.checked =false;
 			box.dataset.triggr ="false";
 			box.dataset.startup ="false";
-		}	
-	const boxesss=document.querySelectorAll(".dif_btn_manager");
-	for(const box of boxesss){
-		box.dataset.started=false;
-	}
+		}
+		const boxesss=document.querySelectorAll(".dif_btn_manager");
+		if(!isfrombtn){
+			for(const box of boxesss){
+			box.dataset.started=false;
+			box.disabled =false;
+			}
+		}else{
+			for(const box of boxesss){
+			box.dataset.started=true;
+			box.disabled =false;
+			}
+		}
+		boxes(".difficulty_buttons Button",false);
+
 
 		
 	
@@ -133,7 +143,7 @@ function changedif(id,num){
 					}
 	difficulty=num;
 	document.querySelector(".dif").innerHTML="difficulty:"+difficulty;
-	startmines();
+	startmines(false);
 }
 function boxes(name,disable){
 	const boxes=document.querySelectorAll(name);

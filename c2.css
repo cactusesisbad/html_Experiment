@@ -17,16 +17,13 @@ body.black{
 	width:100vw;
 }
 .dif_btn_manager[data-started="true"]{
-	position:absolute;
 	visibility:visible;
-	transform-origin:centre;
 	transform:scale(1);
 }
 .dif_btn_manager{
+	position:absolute;
 	transition:all 2s ease;
-	position:relative;
 	visibility:hidden;
-	transform-origin:centre;
 	transform:scale(0);
 }
 .difficulty_button{
@@ -60,8 +57,6 @@ body.black{
 	justify-content:center;
 	align-items:center;
 	flex-direction:column;
-
-
 }
 .minds{
 	flex-grow:1;
@@ -87,8 +82,8 @@ body.black{
 }
 
 .startbtn{
-	width:10vw;
-	height:5vh;
+	width:20vw;
+	height:10vh;
 	border-radius:10px;
 }
 
