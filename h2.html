@@ -18,9 +18,8 @@
 				<div id="status">Wanna Play<strong><i>?</i></strong></div>
 				<hr/>
 				<p id="score">Score:1</p>
-				<div class="dif"><p>Pick a difficulty !</p></div>
 				<p id="bombstxt">bombs:0</p>
-				<div><input type="range" id="bet" name="bet"min="1" max="10" /> <label for="bet">bet amount:5</label></div>
+
 				<div class="mindfield">
 					<input class="minds" type="checkbox" id="checkbox1"onclick="checkmines(0,id)"  data-startup=true disabled=true/>
 					<input class="minds" type="checkbox" id="checkbox2"onclick="checkmines(1,id)"  data-startup=true disabled=true/>
@@ -36,6 +35,13 @@
 				<div> <button class="startbtn" id="startbtn" onclick="startmines(true)">Let's Play<i><b>!</b></i></button></div>
 
 				<div class="dif_btn_manager" data-started="true">
+					<div class="bet">
+
+						<label class="lbett" for="bet">bet amount:5</label>
+						<div class="bett">
+							<input class="bettt" type="range" id="bet" name="bet"min="1" max="10" /> 
+						</div>
+					</div>
 					<div class="difficulty_buttons">
 						<button class="difficulty_button" id="easy" onclick="changedif(id,1)" >easy </br> difficulty</button>
 						<button class="difficulty_button" id="med" onclick="changedif(id,2)" >medium</br> difficulty</button>

@@ -142,7 +142,6 @@ function changedif(id,num){
 					box.dataset.started=false;
 					}
 	difficulty=num;
-	document.querySelector(".dif").innerHTML="difficulty:"+difficulty;
 	startmines(false);
 }
 function boxes(name,disable){

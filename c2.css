@@ -9,30 +9,53 @@ body.black{
 	color:white;
 	background-color:black;
 }
-.difficulty_buttons{
-	margin:0vh 10vw;
-	display:flex;
-	justify-content:space-evenly;
-	align-items:space-evenly;
-	width:100vw;
-}
+
 .dif_btn_manager[data-started="true"]{
 	visibility:visible;
 	transform:scale(1);
 }
 .dif_btn_manager{
 	position:absolute;
-	transition:all 0.5s ease;
+	transition:all 0.5s ease-in;
 	visibility:hidden;
 	transform:scale(0);
+	background-color:grey;
+	border:5px solid white;
+	width:98vw;
+}
+.difficulty_buttons{	
+	display:flex;
+	justify-content:space-evenly;
+	align-items:space-evenly;
 }
 .difficulty_button{
 	padding:0px 3vw;
-	height:80vh;
-	width:30vw;
+	height:40vh;
+	width:30%;
 	transition:all 0.15s ease;
 	border-radius:10px;
 
+}
+.bet{
+	display:flex;
+	justify-content:space-evenly;
+	align-items:center; 
+	margin:1% 1%;
+}
+.bett{
+	background-color:blue;
+}
+.bettt{
+	width:50vw;
+	height:20vh;
+}
+.lbett{
+	background-color:red;
+	width:30%;
+	height:20vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
 }
 
 .difficulty_button:hover{
@@ -41,7 +64,6 @@ body.black{
 
 .difficulty_button:disabled{
 	background-color:brown;
-	width:0vw;
 }
 
 .mindfield{
