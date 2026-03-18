@@ -11,13 +11,13 @@ body.black{
 }
 
 .dif_btn_manager[data-started="true"]{
-	visibility:visible;
+	opacity:1;
 	transform:scale(1);
 }
 .dif_btn_manager{
 	position:absolute;
-	transition:all 0.5s ease-in;
-	visibility:hidden;
+	transition:all 0.2s ease-out;
+	opacity:0;
 	transform:scale(0);
 	background-color:grey;
 	border:5px solid white;
@@ -68,7 +68,7 @@ body.black{
 
 .mindfield{
 	border:5px solid purple;
-	max-width:35vw;
+	max-width:30vw;
 	aspect-ratio:1/1;
 	flex-wrap:wrap;
 	display:flex;
@@ -90,8 +90,8 @@ body.black{
 	-webkit-appearance: none;
 	appearance:none;
 	background-color:blue;
-	width:10vw;
-	height:10vw;
+	width:9vw;
+	height:9vw;
 	transition:	all 0.2s ease;
 	border-radius:10px;
 }

@@ -32,16 +32,16 @@
 					<input class="minds" type="checkbox" id="checkbox9"onclick="checkmines(8,id)"  data-startup=true disabled=true/>
 				</div>
 					<div> <button class="startbtn" id="startbtn" onclick="startmines(true)">Let's Play<i><b>!</b></i></button></div>
-				<div class="dif_btn_manager" data-started="true">
+				<div class="dif_btn_manager" data-started="false">
 					<div class="bet">
 						<label class="lbett" for="bet">bet amount:5</label>
 						<div class="bett">
 							<input class="bettt" type="range" id="bet" name="bet"min="1" max="10" /> 
 						</div>
-						<div>
-						debug mode
-						<input type="checkbox" onclick="debugmode=!debugmode"/> </br>
-						<sub>check inspect element!</sub>
+						<div class="debuger">
+							debug mode
+							<input class="debug_btn" type="checkbox" onclick="debugmode=!debugmode"/> </br>
+							<sub>check inspect element!</sub>
 						</div>
 					</div>
 					<div class="difficulty_buttons">

@@ -25,7 +25,7 @@ const minesbtn = document.getElementById("startbtn");
 const betslider = document.getElementById("bet");
 //updates the sliders
 betslider.addEventListener("input",function changebet(){bet=betslider.value; document.querySelector('label[for="bet"]').innerHTML="bet amount:"+bet;});
-
+document.addEventListener("DOMContentLoaded",()=>{man=document.querySelector(".dif_btn_manager");man.offsetHeight;man.dataset.started=true;});	
 
 //starts or generates a new fielsd
 function startmines(isfrombtn){
@@ -54,13 +54,13 @@ function startmines(isfrombtn){
 			}
 		}
 		boxes(".difficulty_buttons Button",false);
-
+		document.querySelector(".debuger input[type='checkbox']").checked=debugmode;;
 
 		
 	
 	let currentmines=totalmines;
 	//calculate current mines
-	let f = Math.round((totalmines*difficulty)+bet/10);
+	let f = Math.round((totalmines*difficulty)+bet/2.5);
 	if(f<8&&f>0){currentmines=f;}else{
 		if(f>8){ currentmines=8;}
 		if(f<0){ currentmines=0;}
@@ -107,12 +107,12 @@ function checkmines(i,name){
 		debug("game over");
 		score=score+(-0.2*difficulty)-bet;
 		//unchecks all boxs
-		boxes(".game input[type='checkbox']",true);	
+		boxes(".mindfield input[type='checkbox']",true);	
 		minesbtn.innerHTML="Retry<i><b>?</b></i>";
 	}else{
 		let i=0;
 		score=score+0.2*Math.round(totalmines*difficulty+bet);minesbtn.innerHTML="End Game<i><b>?</b></i>";
-		const boxess = document.querySelectorAll(".game input[type='checkbox']");
+		const boxess = document.querySelectorAll(".mindfield input[type='checkbox']");
 		for(const box of boxess	){
 			if(!box.disabled){i++;}
 		}	
@@ -127,11 +127,12 @@ function checkmines(i,name){
 			minesbtn.innerHTML="Reroll<i><b>?</b></i>"
 			statustext.innerHTML="You win <strong><i>!</i></strong>";
 			minesbtn.innerHTML="Try again<i><b>?</b></i>";
-			boxes(".game input[type='checkbox']",true);	
+			boxes(".mindfield input[type='checkbox']",true);	
 		}
 	}
 	//add win logic!
 	scoretext.innerHTML="Score:"+score.toFixed(1);
+	document.querySelector(".debuger input[type='checkbox']").checked=debugmode;;
 	//add a intermediarie score so that score var only updates when game lost or win
 }
 
@@ -158,3 +159,4 @@ function debug(message){
 		console.log(message);
 	}
 }
+
