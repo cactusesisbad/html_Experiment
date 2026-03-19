@@ -25,7 +25,7 @@ const minesbtn = document.getElementById("startbtn");
 const betslider = document.getElementById("bet");
 //updates the sliders
 betslider.addEventListener("input",function changebet(){bet=betslider.value; document.querySelector('label[for="bet"]').innerHTML="bet amount:"+bet;});
-document.addEventListener("DOMContentLoaded",()=>{man=document.querySelector(".dif_btn_manager");man.offsetHeight;man.dataset.started=true;});	
+//document.addEventListener("DOMContentLoaded",()=>{man=document.querySelector(".dif_btn_manager");man.offsetHeight;man.dataset.started=true;});	
 
 //starts or generates a new fielsd
 function startmines(isfrombtn){
@@ -135,7 +135,9 @@ function checkmines(i,name){
 	document.querySelector(".debuger input[type='checkbox']").checked=debugmode;;
 	//add a intermediarie score so that score var only updates when game lost or win
 }
-
+function ChangeColor(){
+	document.body.classList.toggle("black");
+}
 //for difficulty buttons
 function changedif(id,num){
 	
