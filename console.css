@@ -1,0 +1,9 @@
+body{
+	color:black;
+	background-color:white;
+	transition:0.3s ease;
+}
+body.black{
+	color:white;
+	background-color:black;
+}
