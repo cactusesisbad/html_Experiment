@@ -1,0 +1,46 @@
+.top_bar_info{
+	border: 5px solid red;
+	min-height:100%;
+	min-width:60%;
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+	justify-content:space-evenly;
+}
+.top_bar_menu{
+	display:flex;
+	justify-content:space-between;
+	align-items:stretch;
+	max-height:5vh;
+}
+.top_bar_wigets{
+	min-height:100%;
+	border: 5px solid blue;
+}
+.top_bar_search{
+	border:5px solid green;
+}
+
+.portateImage{
+	width:30vw;	
+	height:30vh;
+}
+.memo{
+	border: 5px solid green;
+	display:flex;
+	align-items:center;
+	justify-content:space-around;
+}
+.memoScript{
+	border: 5px solid red;
+	min-height:30vh;
+	min-width:50%;
+	font-size:40px;
+}
+.memoPic{
+	border: 5px solid blue;
+	flex-direction:row;
+}
+.tem{
+	border:5px solid black;
+}
