@@ -1,0 +1,10 @@
+.top_bar_menu{
+	display:flex;
+	align-items:bottom;
+	justify-content:space-between;
+	flex-direction:row;
+	max-height:25px;
+}
+.top_bar_menu button{
+	cursor:pointer;
+}

@@ -19,9 +19,14 @@ body.black{
 	transition:all 0.2s ease-out;
 	opacity:0;
 	transform:scale(0);
+	background-color:lightgrey;
+	border:5px solid black;
+	width:98vw;
+}
+
+body.black .dif_btn_manager{
 	background-color:grey;
 	border:5px solid white;
-	width:98vw;
 }
 .difficulty_buttons{	
 	display:flex;
@@ -34,20 +39,26 @@ body.black{
 	width:30%;
 	transition:all 0.15s ease;
 	border-radius:10px;
-
+	cursor:pointer;
 }
 .bet{
 	display:flex;
 	justify-content:space-evenly;
 	align-items:center; 
 	margin:1% 1%;
+	transition:all 0.2s ease;
 }
 .bett{
 	background-color:blue;
 }
+
 .bettt{
 	width:50vw;
 	height:20vh;
+	cursor:grab;
+}
+.bettt:active{
+	cursor:grabbing;
 }
 .lbett{
 	background-color:red;
@@ -59,21 +70,28 @@ body.black{
 }
 
 .difficulty_button:hover{
+	background-color:lightgrey;
+}
+body.black .difficulty_button:hover{
 	background-color:grey;
 }
 
 .difficulty_button:disabled{
 	background-color:brown;
+	cursor:not-allowed;
 }
 
 .mindfield{
-	border:5px solid purple;
+	border:5px solid pink;
 	max-width:30vw;
 	aspect-ratio:1/1;
 	flex-wrap:wrap;
 	display:flex;
 	justify-content:space-evenly;
 	align-items:center;
+}
+body.black .mindfield{
+	border:5px solid purple;
 }
 .game{
 	display:flex;		
@@ -85,6 +103,8 @@ body.black{
 	width:100vw;
 	margin:0px;
 }
+
+
 .minds{
 	flex-grow:1;
 	-webkit-appearance: none;
@@ -94,24 +114,35 @@ body.black{
 	height:9vw;
 	transition:	all 0.2s ease;
 	border-radius:10px;
+	cursor:pointer;
 }
 
 .minds:checked{
 	background-color:green;
+	cursor:default;
 }
 
 .minds[data-startup="true"]{
+	background-color:lightgrey;
+	cursor:not-allowed;
+}
+body.black .minds[data-startup="true"]{
 	background-color:grey;
+	cursor:not-allowed;
 }
 
 .minds[data-triggr="true"]{
 	background-color:red;
+	cursor:not-allowed;
 }
 
 .startbtn{
 	width:20vw;
 	height:10vh;
 	border-radius:10px;
+	cursor:pointer;
 }
-
+.lbett{
+	font-size:200%;
+}
 

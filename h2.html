@@ -5,13 +5,20 @@
 			charset="utf-8">
 			<title>The Mindfield </title>		
 			<link rel="stylesheet" href="c2.css">
+			<link rel="stylesheet" href="topbar.css">
 			<link rel="icon" type="image/png"href="thumbnail.png" >
 		<script src="j2.js" defer></script>
+		<audio id="succes" src="succes.wav"></audio>
+		<audio id="fail" src="death.wav"></audio>
+		<audio id="win1" src="win1.mp3"></audio>
+		<audio id="win2" src="win2.mp3"></audio>
+		<audio id="clicks" src="click.wav"></audio>
 	</head>
 	<body class="black">
 		<span class="top_bar_menu">
 			<button onclick="ChangeColor()"><img src="bright.jpg" height=20 width=20></button>
-			project_1
+			<u><strong><em>project_1</em></strong></u>
+			<button><a href="https://cactusesisbad.github.io/html_Experiment/hub.html">go back?</a></button>
 		</span>
 		<hr/>
 			<div class="game">
@@ -34,9 +41,9 @@
 					<div> <button class="startbtn" id="startbtn" onclick="startmines(true)">Let's Play<i><b>!</b></i></button></div>
 				<div class="dif_btn_manager" data-started="false">
 					<div class="bet">
-						<label class="lbett" for="bet">bet amount:5</label>
+						<label class="lbett" for="bet"><strong>Bet Amount:5</strong></label>
 						<div class="bett">
-							<input class="bettt" type="range" id="bet" name="bet"min="1" max="10" /> 
+							<input class="bettt" type="range" id="bet" name="bet"min="1" max="10" step="1"/> 
 						</div>
 						<div class="debuger">
 							debug mode
