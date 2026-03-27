@@ -7,6 +7,9 @@
 	align-items:center;
 	justify-content:space-evenly;
 }
+.top_bar_info{
+    
+}
 .top_bar_menu{
 	display:flex;
 	justify-content:space-between;
@@ -22,8 +25,8 @@
 }
 
 .portateImage{
-	width:30vw;	
-	height:30vh;
+	width:20vw;	
+	height:20vw;
 }
 .memo{
 	border: 5px solid green;
@@ -40,7 +43,59 @@
 .memoPic{
 	border: 5px solid blue;
 	flex-direction:row;
+    min-height:25vh;
 }
+
+.
 .tem{
 	border:5px solid black;
 }
+
+.main_content{
+
+}
+.discriptions{
+
+}
+.projects{
+    min-height:30vh;
+    display:flex;
+    justify-content:space-evenly;
+    align-content:center;
+    flex-wrap:wrap;
+    row-gap:10vh;
+}
+.projects button{
+    min-height:30vh;
+    min-width:30%;
+}
+
+.footer{
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
