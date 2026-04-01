@@ -3,7 +3,25 @@ body{
 	background-color:white;
 	transition:0.3s ease;
 }
+
 body.black{
 	color:white;
 	background-color:black;
+}
+.top_bar_menu{
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+.content{
+	display:flex;
+	align-items:center;
+	flex-direction:column;
+}
+.memo .pic{
+	border:5px solid red;
+	min-height:50vh;
+	min-width:30vw;
+	max-height:60vh;
+	max-width:40vw;
 }
