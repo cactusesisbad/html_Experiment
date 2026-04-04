@@ -24,7 +24,7 @@
 			<div class="game">
 				<div id="status">Wanna Play<strong><i>?</i></strong></div>
 				<hr/>
-				<p id="score">Score:1</p>
+				<p class="score" id="score">Score:1</p>
 				<p id="bombstxt">bombs:0</p>
 
 				<div class="mindfield">
@@ -45,17 +45,18 @@
 						<div class="bett">
 							<input class="bettt" type="range" id="bet" name="bet"min="1" max="10" step="1"/> 
 						</div>
-						<div class="debuger">
-							debug mode
-							<input class="debug_btn" type="checkbox" onclick="debugmode=!debugmode"/> </br>
-							<sub>check inspect element!</sub>
-						</div>
+
 					</div>
 					<div class="difficulty_buttons">
 						<button class="difficulty_button" id="easy" onclick="changedif(id,1)" >easy </br> difficulty</button>
 						<button class="difficulty_button" id="med" onclick="changedif(id,2)" >medium</br> difficulty</button>
 						<button class="difficulty_button" id="hard" onclick="changedif(id,3)" >hard</br> difficulty</button>
-					 </div>
+					 </div>	
+					<div class="debuger">
+							debug mode
+							<input class="debug_btn" type="checkbox" onclick="debugmode=!debugmode"/>
+							<sub>check inspect element!</sub>
+				    </div>
 				</div>
 
 			</div>

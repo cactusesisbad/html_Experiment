@@ -10,6 +10,15 @@ body.black{
 	background-color:black;
 }
 
+.score{
+    font-weight:bold;
+    letter-spacing:3px;
+    font-size:30px;   
+    max-height:15px;
+    margin:0px; 
+}
+
+
 .dif_btn_manager[data-started="true"]{
 	opacity:1;
 	transform:scale(1);
@@ -47,6 +56,7 @@ body.black .dif_btn_manager{
 	align-items:center; 
 	margin:1% 1%;
 	transition:all 0.2s ease;
+    flex-direction:column;
 }
 .bett{
 	background-color:blue;
@@ -54,7 +64,7 @@ body.black .dif_btn_manager{
 
 .bettt{
 	width:50vw;
-	height:20vh;
+	height:3vh;
 	cursor:grab;
 }
 .bettt:active{
@@ -84,6 +94,7 @@ body.black .difficulty_button:hover{
 .mindfield{
 	border:5px solid pink;
 	max-width:30vw;
+    min-width:300px;
 	aspect-ratio:1/1;
 	flex-wrap:wrap;
 	display:flex;
@@ -110,8 +121,8 @@ body.black .mindfield{
 	-webkit-appearance: none;
 	appearance:none;
 	background-color:blue;
-	width:9vw;
-	height:9vw;
+	width:28%;
+    aspect-ratio:1/1;
 	transition:	all 0.2s ease;
 	border-radius:10px;
 	cursor:pointer;
@@ -137,10 +148,13 @@ body.black .minds[data-startup="true"]{
 }
 
 .startbtn{
-	width:20vw;
-	height:10vh;
+	max-width:200px;
+	max-height:10vh;
+    min-width:100px;
+    min-height:25px;
 	border-radius:10px;
 	cursor:pointer;
+    font-size:30px;
 }
 .lbett{
 	font-size:200%;
