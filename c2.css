@@ -49,6 +49,7 @@ body.black .dif_btn_manager{
 	transition:all 0.15s ease;
 	border-radius:10px;
 	cursor:pointer;
+    aspect-ratio: 3 / 4;
 }
 .bet{
 	display:flex;

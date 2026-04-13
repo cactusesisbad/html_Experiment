@@ -46,19 +46,23 @@
 	position:fixed;
 	top:10%;
 	scale:0;
-	transform:perspective(1000px) rotateX(180deg);
+	transform:rotateX(180deg);
 }
 .memo.seen{
+/* need to research what this transition is*/
 	opacity:var(--doneness);
 	scale:var(--doneness);
-	transform:perspective(1000px) rotateX(calc(360deg*var(--doneness)));
+	transform:rotateX(calc(360deg*var(--doneness)));
 	width:94.5%;
+    transition:scale 0s ease-in-out,opacity 0.4s ease-in-out;
 }
+
 .memofiller{
 	grid-column-start:1;
 	grid-column-end:3;
 }
-.memoScript{
+.memo.seen .memoScript{
+/* need to fix make like when only 80% opacity thwn it does this*/
 	border: 5px solid red;
 	min-height:30vh;
 	min-width:100%;
