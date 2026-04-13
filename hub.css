@@ -28,17 +28,41 @@
 	width:20vw;	
 	height:20vw;
 }
+.spacer{
+	border:5px dashed red;
+	width:50px;
+	height:70vh;
+}
+.scrolling{
+	#n0th1n9;
+}
 .memo{
-	border: 5px solid green;
-	display:flex;
-	align-items:center;
-	justify-content:space-between;
+	border: 5mm ridge green;
+	display:grid;
+	grid-template-columns:5fr 2fr;
+	grid-template-rows:5fr 2fr;
+	opacity:0;
+	transition:all 0.6s ease-out;
+	position:fixed;
+	top:10%;
+	scale:0;
+	transform:perspective(1000px) rotateX(180deg);
+}
+.memo.seen{
+	opacity:var(--doneness);
+	scale:var(--doneness);
+	transform:perspective(1000px) rotateX(calc(360deg*var(--doneness)));
+	width:94.5%;
+}
+.memofiller{
+	grid-column-start:1;
+	grid-column-end:3;
 }
 .memoScript{
 	border: 5px solid red;
 	min-height:30vh;
-	min-width:50%;
-	max-width:70%;
+	min-width:100%;
+	max-width:100%;
 	font-size:40px;
     animation:fromRight 0.5s ease-out forwards;
 }
@@ -76,27 +100,23 @@
     
 }
 
-
-
 @keyframes fromLeft{
     from{
         opacity:0;
-        translate:-100px;
+        translate:-200px;
     }
     to{
         opacity:1;
-        translate:100px;
     }    
 
 }
 @keyframes fromRight{
     from{
         opacity:0;
-        translate:100px;
+        translate:200px;
     }
     to{
         opacity:1;
-        translate:-100px;
     }    
 
 }
