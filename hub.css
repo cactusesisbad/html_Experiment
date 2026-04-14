@@ -50,9 +50,10 @@
 }
 .memo.seen{
 /* need to research what this transition is*/
-	opacity:var(--doneness);
-	scale:var(--doneness);
-	transform:rotateX(calc(360deg*var(--doneness)));
+	opacity:var(--doneness,1);
+	scale:var(--doneness,1);
+	
+	transform: rotate3d(1, 0, 0, 180deg * var(--doneness , 1 ));
 	width:94.5%;
     transition:scale 0s ease-in-out,opacity 0.4s ease-in-out;
 }
