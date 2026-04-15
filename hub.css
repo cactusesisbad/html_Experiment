@@ -34,7 +34,9 @@ body{
 	height:20vw;
 }
 .maintitle{
-	
+	font-size:1.5rem;
+	text-align:center;
+	font-weight:bold;
 }
 .spacer{
 	border:0px dashed red;
@@ -76,7 +78,7 @@ body{
 	min-height:30vh;
 	min-width:100%;
 	max-width:100%;
-	font-size:40px;
+	font-size:1.5rem;
     animation:fromRight 0.5s ease-out forwards;
 }
 .memoPic{

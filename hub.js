@@ -1,8 +1,10 @@
 const letters ="qwertyuiopasdfghjklzxcvbnm";
 const title=document.querySelectorAll(".maintitle");
 
-title.forEach(el=>{
-	el.onmouseover=event=>{
+title.forEach(el=>{ el.onmouseover=event=>{
+	//on every mouse event
+	//get target word and loop
+	//in each loop if the letter's indewx is lesser than the number of loops ran that that letter is random else its the target words letters
 		let iterations=0;
 		let word =event.target.dataset.value;
 		const interval=setInterval(()=>{
@@ -15,8 +17,8 @@ title.forEach(el=>{
 					}
 			}).join("");
 			if(iterations>=word.length){clearInterval(interval)}
-			iterations+=1/10;   
-		},10);}		
+			iterations+=1/3;   
+		},30);}		
 	
 });
 //lerp
@@ -29,21 +31,17 @@ function easeinout(varr, initial, p1, p2, final){
     varr * varr * varr * final
 		return y;
 }
-//ok idea lets say we space out smt called spacersN-spacersN+1
-//find the number of the current spacer visible and then using it make the associated memo visble
-
-//so the idea is that do calculations on the num before its sent
-
-//find which lerp looks nice enough and make it!
 const scrollers = document.querySelectorAll(".spacer");
 const memo = document.querySelectorAll(".memo");
+
 const opt={root:null,threshold:[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]};
+//checks every N timess
 const observer = new IntersectionObserver((e)=>{
 		e.forEach((entry)=>{
-			
+			//so there are actually invisible elements and its just checking how much of them is seen
 			for(let i=0;i<scrollers.length;i++){
 				//im too lazy to maually add more number to this stupid thing	
-				if(entry.isIntersecting && entry.intersectionRatio>0.7){
+				if(entry.isIntersecting){
 					if(entry.target==scrollers[i]){
 						memo[i].classList.add("seen");
 						memo[i].style.setProperty("--doneness",easeinout(entry.intersectionRatio,0,0,0,1));
