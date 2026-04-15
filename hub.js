@@ -1,7 +1,7 @@
 const letters ="qwertyuiopasdfghjklzxcvbnm";
-const maybe=document.querySelectorAll(".maybe");
+const title=document.querySelectorAll(".maintitle");
 
-maybe.forEach(el=>{
+title.forEach(el=>{
 	el.onmouseover=event=>{
 		let iterations=0;
 		let word =event.target.dataset.value;
@@ -19,22 +19,34 @@ maybe.forEach(el=>{
 		},10);}		
 	
 });
+//lerp
+function easeinout(varr, initial, p1, p2, final){
+	//yes i did copy it. it looked too nice to pass up
+	//https://morethandev.hashnode.dev/demystifying-the-cubic-bezier-function-ft-javascript <=interesting
+		let y= (1 - varr) * (1 - varr) * (1 - varr) * initial +
+    3 * (1 - varr) * (1 - varr) * varr * p1 +
+    3 * (1 - varr) * varr * varr * p2 +
+    varr * varr * varr * final
+		return y;
+}
 //ok idea lets say we space out smt called spacersN-spacersN+1
 //find the number of the current spacer visible and then using it make the associated memo visble
+
+//so the idea is that do calculations on the num before its sent
+
+//find which lerp looks nice enough and make it!
 const scrollers = document.querySelectorAll(".spacer");
 const memo = document.querySelectorAll(".memo");
 const opt={root:null,threshold:[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]};
 const observer = new IntersectionObserver((e)=>{
 		e.forEach((entry)=>{
-			console.log("Current Visibility Ratio:", entry.intersectionRatio);
 			
-		
 			for(let i=0;i<scrollers.length;i++){
 				//im too lazy to maually add more number to this stupid thing	
-				if(entry.isIntersecting /* && entry.intersectionRatio>0.597*/){
+				if(entry.isIntersecting && entry.intersectionRatio>0.7){
 					if(entry.target==scrollers[i]){
 						memo[i].classList.add("seen");
-						memo[i].style.setProperty("--doneness",entry.intersectionRatio);
+						memo[i].style.setProperty("--doneness",easeinout(entry.intersectionRatio,0,0,0,1));
 					}
 				}else{
 					console.log(i);					
