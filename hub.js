@@ -35,7 +35,7 @@ const scrollers = document.querySelectorAll(".spacer");
 const memo = document.querySelectorAll(".memo");
 
 const opt={root:null,threshold:[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]};
-//checks every N timess
+//updtes every N timess
 const observer = new IntersectionObserver((e)=>{
 		e.forEach((entry)=>{
 			//so there are actually invisible elements and its just checking how much of them is seen

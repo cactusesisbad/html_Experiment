@@ -3,6 +3,12 @@ body{
 	padding:0;
 	margin:0;
 }
+hr{
+	margin:3px;
+}
+button{
+	border-radius:5%;
+}
 .top_bar_info{
 	border: 5px solid red;
 	min-height:100%;
@@ -18,8 +24,6 @@ body{
 .top_bar_menu{
 	display:flex;
 	justify-content:space-between;
-	align-items:stretch;
-	max-height:5vh;
 }
 .top_bar_wigets{
 	min-height:100%;
@@ -37,6 +41,12 @@ body{
 	font-size:1.5rem;
 	text-align:center;
 	font-weight:bold;
+	font-family:consolas;
+	margin:0;
+		/*https://uigradients.com/#MoonlitAsteroid*/
+	background: #0F2027;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .spacer{
 	border:0px dashed red;
@@ -50,6 +60,11 @@ body{
 	background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .memo{
+	background: #0575E6;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/
+
 	border: 5mm ridge green;
 	display:grid;
 	grid-template-columns:5fr 2fr;
@@ -73,13 +88,12 @@ body{
 	grid-column-end:3;
 }
 .memo.seen .memoScript{
-/* need to fix make like when only 80% opacity thwn it does this*/
 	border: 5px solid red;
 	min-height:30vh;
 	min-width:100%;
 	max-width:100%;
 	font-size:1.5rem;
-    animation:fromRight 0.5s ease-out forwards;
+    animation:fromRight 1s ease-out forwards;
 }
 .memoPic{
 	border: 5px solid blue;
