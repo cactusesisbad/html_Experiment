@@ -31,16 +31,19 @@ function easeinout(varr, initial, p1, p2, final){
     varr * varr * varr * final
 		return y;
 }
-const scrollers = document.querySelectorAll(".spacer");
-const memo = document.querySelectorAll(".memo");
 
-const opt={root:null,threshold:[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]};
+//made this monstor reusable
+//god help me work w undocumented spagehitty
+function scrolleffect(spacer , target){
+	var scrollers = document.querySelectorAll(spacer);
+	var memo = document.querySelectorAll(target);
+
+var opt={root:null,threshold:[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.0]};
 //updtes every N timess
-const observer = new IntersectionObserver((e)=>{
+var observer = new IntersectionObserver((e)=>{
 		e.forEach((entry)=>{
 			//so there are actually invisible elements and its just checking how much of them is seen
 			for(let i=0;i<scrollers.length;i++){
-				//im too lazy to maually add more number to this stupid thing	
 				if(entry.isIntersecting){
 					if(entry.target==scrollers[i]){
 						memo[i].classList.add("seen");
@@ -59,4 +62,9 @@ const observer = new IntersectionObserver((e)=>{
 		})
 },opt);
 scrollers.forEach(obj =>observer.observe(obj));
+}
+//how to use \/
+scrolleffect(".spacer",".memo");
+scrolleffect(".mini_spacer",".project_btn");
+
 

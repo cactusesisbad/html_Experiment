@@ -53,6 +53,17 @@ button{
 	width:150px;
 	height:75vh;
 }
+.micro_spacer{
+	border:0px dashed red;
+	width:150px;
+	height:25vh;
+}
+.mini_spacer{
+	border:10px dashed red;
+	width:150px;
+	height:50vh;
+	position:absolute;
+}
 .scrolling{
 	/*https://uigradients.com/#MoonlitAsteroid*/
 	background: #0F2027;  /* fallback for old browsers */
@@ -63,7 +74,7 @@ button{
 	background: #0575E6;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #021B79, #0575E6);  /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(to right, #021B79, #0575E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-/
+
 
 	border: 5mm ridge green;
 	display:grid;
@@ -72,15 +83,16 @@ button{
 	opacity:0;
 	transition:all 0.6s ease-out;
 	position:fixed;
-	top:10%;
+	top:1%;
 	scale:0;
 	transform:rotateX(180deg) translateY(-100vh);
+	margin:1.5%;
 }
 .memo.seen{
 	opacity:calc(var(--doneness,1));
 	scale:var(--doneness,1);
 	transform:perspective(1000px) rotateX(calc(360deg*var(--doneness,1))) translateY(calc(10vh*var(--doneness,1)));
-	width:94.5%;
+	width:95%;
 }
 
 .memofiller{
@@ -113,20 +125,54 @@ button{
 
 }
 .projects{
-    min-height:30vh;
-    display:flex;
-    justify-content:space-evenly;
-    align-content:center;
-    flex-wrap:wrap;
-    row-gap:10vh;
+	height:150vh;
+	background-image:url(projects.png);
+	background-repeat: no-repeat;
+	background-size: 100vw 150vh;
+	background-position:center;
 }
-.projects button{
-    min-height:30vh;
-    min-width:30%;
+.project_btn{
+	/*when u wanna address the elephant change the below var*/
+	height:30%;
+	opacity:0;
+	display:flex;
+	align-items:start;
+	justify-content:space-evenly;
+}
+.project_btn.seen{
+	opacity:calc(var(--doneness,1));
+	animation:fromLeft 1s ease-in-out forwards;
+}
+.project_btn button{
+    min-height:90%;
+    min-width:90%;
+}
+.popup{
+	opacity:0;
+}
+.button_wrapper{
+	width:25%;
+	height:50%;
+}
+.button_wrapper:hover .popup{
+	animation: fade 0.3s ease-in-out forwards;
+}
+.project_btn button:hover{
+    min-height:100%;
+    min-width:100%;
 }
 
 .footer{
     
+}
+@keyframes fade{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }    
+
 }
 
 @keyframes fromLeft{
@@ -146,6 +192,7 @@ button{
     }
     to{
         opacity:1;
+        translate:-5px;
     }    
 
 }
