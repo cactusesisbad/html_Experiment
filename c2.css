@@ -31,6 +31,7 @@ body.black{
 	background-color:lightgrey;
 	border:5px solid black;
 	width:98vw;
+	top:12.5%;
 }
 
 body.black .dif_btn_manager{
