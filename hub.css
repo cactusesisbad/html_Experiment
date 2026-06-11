@@ -123,6 +123,19 @@ button{
 }
 .discriptions{
 	height:30vh;
+	border:5px solid red;
+	display:flex;
+	flex-direction: column;
+}
+.text{
+	border:5px solid purple;
+}
+.slide{
+	/*add display:flex if images do not flex*/
+	display: flex;
+	flex-direction: row;
+	width:100vw;
+	border: 5px solid hotpink;
 }
 .projects{
 	height:150vh;
@@ -153,6 +166,7 @@ button{
 .button_wrapper{
 	width:25%;
 	height:50%;
+	border:5px solid green;
 }
 .button_wrapper:hover .popup{
 	animation: fade 0.3s ease-in-out forwards;

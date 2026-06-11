@@ -68,3 +68,9 @@ scrolleffect(".spacer",".memo");
 scrolleffect(".mini_spacer",".project_btn");
 
 
+const slide =document.querySelector(".slide");
+slide.addEventListener("wheel",(event)=>{
+	event.preventDefault();
+	slide.scollLeft+=event.deltaY;
+},{passive:false});
+
