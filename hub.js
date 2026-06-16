@@ -71,6 +71,17 @@ scrolleffect(".mini_spacer",".project_btn");
 const slide =document.querySelector(".slide");
 slide.addEventListener("wheel",(event)=>{
 	event.preventDefault();
-	slide.scollLeft+=event.deltaY;
+	slide.scrollLeft+=event.deltaY*50;
 },{passive:false});
+
+const slide_btns=document.querySelectorAll(".discriptions button");
+slide_btns.forEach((btn)=>{
+	btn.addEventListener("click",(event)=>{
+		if(btn.textContent==">"){
+			slide.scrollLeft+=50*10.5;
+		}else if(btn.textContent=="<"){
+			slide.scrollLeft-=50*10.5;
+		}
+	});
+});
 

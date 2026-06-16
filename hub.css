@@ -122,7 +122,7 @@ button{
 
 }
 .discriptions{
-	height:30vh;
+	height:50vh;
 	border:5px solid red;
 	display:flex;
 	flex-direction: column;
@@ -130,13 +130,43 @@ button{
 .text{
 	border:5px solid purple;
 }
+.slide_container{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content:space-evenly;
+}
+.slide_container button{
+	width: 10%;
+	height: 40%;
+}
 .slide{
 	/*add display:flex if images do not flex*/
 	display: flex;
 	flex-direction: row;
-	width:100vw;
+	width:500px;
+	height:30vh;
+	box-sizing: border-box;
 	border: 5px solid hotpink;
+	overflow-x: auto;
+   	scroll-behavior: smooth;
+	gap:34px;
 }
+.slide::-webkit-scrollbar {
+  display: none;			 /* Safrai */
+}
+.slide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.slide .button_wrapper{
+	flex-shrink:0;
+	width:100%;
+	height:100%;
+	border:0px solid orangered;
+}
+
 .projects{
 	height:150vh;
 	background-image:url(projects.png);
@@ -167,6 +197,11 @@ button{
 	width:25%;
 	height:50%;
 	border:5px solid green;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+	justify-content:center;
+
 }
 .button_wrapper:hover .popup{
 	animation: fade 0.3s ease-in-out forwards;
